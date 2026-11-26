@@ -1,0 +1,8 @@
+drgrpo_s2 train algo=dr_grpo curriculum.mode=none seed=2 max_steps=500 save_steps=100 grpo.save_only_model=true grpo.save_total_limit=10
+gspo_s2 train algo=gspo curriculum.mode=none seed=2 max_steps=500 save_steps=100 grpo.save_only_model=true grpo.save_total_limit=10
+dapo_s2 train algo=dapo curriculum.mode=none seed=2 max_steps=500 save_steps=100 grpo.save_only_model=true grpo.save_total_limit=10
+drgrpo_filter_s2 train algo=dr_grpo curriculum.mode=filter curriculum.difficulty=passrate curriculum.passrate_path=/home/ravi.sah/oml/outputs/difficulty/math.jsonl seed=2 max_steps=500 save_steps=100 grpo.save_only_model=true grpo.save_total_limit=10
+drgrpo_s3 train algo=dr_grpo curriculum.mode=none seed=3 max_steps=500 save_steps=100 grpo.save_only_model=true grpo.save_total_limit=10
+gspo_s3 train algo=gspo curriculum.mode=none seed=3 max_steps=500 save_steps=100 grpo.save_only_model=true grpo.save_total_limit=10
+dapo_s3 train algo=dapo curriculum.mode=none seed=3 max_steps=500 save_steps=100 grpo.save_only_model=true grpo.save_total_limit=10
+drgrpo_filter_s3 train algo=dr_grpo curriculum.mode=filter curriculum.difficulty=passrate curriculum.passrate_path=/home/ravi.sah/oml/outputs/difficulty/math.jsonl seed=3 max_steps=500 save_steps=100 grpo.save_only_model=true grpo.save_total_limit=10

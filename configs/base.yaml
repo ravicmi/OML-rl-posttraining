@@ -1,0 +1,32 @@
+# Base config for RL ablations on a ~0.6B model (single-GPU run, vLLM colocated).
+run_name: debug
+output_dir: /home/ravi.sah/oml/outputs/runs
+# Start policy. Point this at your SFT checkpoint (see "SFT data and checkpoint" under /fsx on the cluster).
+model: Qwen/Qwen3-0.6B
+seed: 0
+algo: grpo               # grpo | dr_grpo | dapo | gspo   (see oml/train_rl.py ALGOS)
+max_steps: 100           # split evenly across curriculum stages (100 steps x 16 prompts = 1600 problems)
+lr: 2.0e-6
+format_weight: 0.0       # >0 adds a boxed-answer shaping reward
+report_to: none          # set to wandb if you want it
+vllm_gpu_util: 0.3
+
+data:
+  train: math            # math | gsm8k
+  max_samples: null
+
+curriculum:
+  mode: none             # none | easy2hard | hard2easy | filter | filter_easy2hard
+  n_stages: 3
+  difficulty: level      # level (MATH Level 1-5) | passrate (needs passrate_path from oml.difficulty)
+  passrate_path: null
+
+# Passed straight to TRL GRPOConfig; wins over the algo preset.
+grpo:
+  per_device_train_batch_size: 8
+  gradient_accumulation_steps: 16  # 8*16 = 128 completions = 16 prompts x 8
+  num_generations: 8
+  max_prompt_length: 512
+  max_completion_length: 1024
+  temperature: 1.0
+  num_iterations: 1

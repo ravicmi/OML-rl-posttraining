@@ -1,0 +1,35 @@
+{
+  "model": "/home/ravi.sah/oml/outputs/runs/dapo_none/stage0/final",
+  "n": 4,
+  "temperature": 0.7,
+  "max_tokens": 1536,
+  "sets": {
+    "math500": {
+      "num_problems": 500,
+      "mean_acc": 0.522,
+      "mean_len": 702.361,
+      "boxed_rate": 0.8505,
+      "truncated_rate": 0.15,
+      "pass@1": 0.522,
+      "pass@4": 0.716
+    },
+    "gsm8k": {
+      "num_problems": 1319,
+      "mean_acc": 0.6429112964366944,
+      "mean_len": 298.8337755875663,
+      "boxed_rate": 0.9819939347990903,
+      "truncated_rate": 0.007202426080363912,
+      "pass@1": 0.6429112964366944,
+      "pass@4": 0.8339651250947687
+    },
+    "aime24": {
+      "num_problems": 30,
+      "mean_acc": 0.03333333333333333,
+      "mean_len": 1356.8166666666666,
+      "boxed_rate": 0.35833333333333334,
+      "truncated_rate": 0.6416666666666667,
+      "pass@1": 0.03333333333333333,
+      "pass@4": 0.06666666666666667
+    }
+  }
+}

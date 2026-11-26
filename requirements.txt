@@ -1,0 +1,11 @@
+trl
+transformers
+datasets
+accelerate
+deepspeed
+math-verify[antlr4_13_2]
+pyyaml
+numpy
+pandas
+matplotlib
+wandb

@@ -1,0 +1,35 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "n": 4,
+  "temperature": 0.7,
+  "max_tokens": 1536,
+  "sets": {
+    "math500": {
+      "num_problems": 500,
+      "mean_acc": 0.4995,
+      "mean_len": 573.868,
+      "boxed_rate": 0.934,
+      "truncated_rate": 0.0655,
+      "pass@1": 0.4995,
+      "pass@4": 0.73
+    },
+    "gsm8k": {
+      "num_problems": 1319,
+      "mean_acc": 0.6051933282789992,
+      "mean_len": 241.1385519332828,
+      "boxed_rate": 0.9859742228961335,
+      "truncated_rate": 0.0005686125852918878,
+      "pass@1": 0.6051933282789992,
+      "pass@4": 0.8089461713419257
+    },
+    "aime24": {
+      "num_problems": 30,
+      "mean_acc": 0.008333333333333333,
+      "mean_len": 1098.3083333333334,
+      "boxed_rate": 0.6916666666666667,
+      "truncated_rate": 0.325,
+      "pass@1": 0.008333333333333333,
+      "pass@4": 0.03333333333333333
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "model": "/home/ravi.sah/oml/outputs/runs/drgrpo_none/stage0/final",
+  "n": 4,
+  "temperature": 0.7,
+  "max_tokens": 1536,
+  "sets": {
+    "math500": {
+      "num_problems": 500,
+      "mean_acc": 0.5405,
+      "mean_len": 627.36,
+      "boxed_rate": 0.894,
+      "truncated_rate": 0.112,
+      "pass@1": 0.5405,
+      "pass@4": 0.728
+    },
+    "gsm8k": {
+      "num_problems": 1319,
+      "mean_acc": 0.6281273692191054,
+      "mean_len": 248.1944655041698,
+      "boxed_rate": 0.9984836997725549,
+      "truncated_rate": 0.0017058377558756635,
+      "pass@1": 0.6281273692191054,
+      "pass@4": 0.8036391205458681
+    },
+    "aime24": {
+      "num_problems": 30,
+      "mean_acc": 0.008333333333333333,
+      "mean_len": 1260.3916666666667,
+      "boxed_rate": 0.5166666666666667,
+      "truncated_rate": 0.49166666666666664,
+      "pass@1": 0.008333333333333333,
+      "pass@4": 0.03333333333333333
+    }
+  }
+}

@@ -1,0 +1,8 @@
+# Append to ~/.ssh/config once your public key is in /home/ravi.sah/.ssh/authorized_keys on the cluster.
+# Then:  ssh bgen   |   rsync -av src/ bgen:/home/ravi.sah/oml/src/   (see sync.sh)
+Host bgen
+    HostName sagemaker-cluster:tnnnangk68xy_login-group-i-0b62c9b3c3ff968fa
+    User ravi.sah
+    IdentityFile ~/.ssh/id_ed25519
+    ProxyCommand env PATH=$HOME/.local/bin:$PATH AWS_PROFILE=bharatgen AWS_DEFAULT_REGION=ap-south-1 aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters portNumber=%p
+    ServerAliveInterval 30

@@ -1,0 +1,35 @@
+{
+  "model": "/home/ravi.sah/oml/outputs/runs/smoke/stage0/final",
+  "n": 4,
+  "temperature": 0.7,
+  "max_tokens": 1536,
+  "sets": {
+    "math500": {
+      "num_problems": 500,
+      "mean_acc": 0.496,
+      "mean_len": 575.8755,
+      "boxed_rate": 0.9235,
+      "truncated_rate": 0.076,
+      "pass@1": 0.496,
+      "pass@4": 0.71
+    },
+    "gsm8k": {
+      "num_problems": 1319,
+      "mean_acc": 0.5987490523123579,
+      "mean_len": 238.92608036391206,
+      "boxed_rate": 0.9838893100833965,
+      "truncated_rate": 0.0003790750568612585,
+      "pass@1": 0.5987490523123579,
+      "pass@4": 0.796057619408643
+    },
+    "aime24": {
+      "num_problems": 30,
+      "mean_acc": 0.016666666666666666,
+      "mean_len": 1148.7,
+      "boxed_rate": 0.6166666666666667,
+      "truncated_rate": 0.4,
+      "pass@1": 0.016666666666666666,
+      "pass@4": 0.06666666666666667
+    }
+  }
+}

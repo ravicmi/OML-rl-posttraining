@@ -1,0 +1,8 @@
+smoke train algo=grpo max_steps=3 data.max_samples=100 grpo.max_completion_length=256
+base_qwen3_0p6b eval Qwen/Qwen3-0.6B
+grpo_none train algo=grpo curriculum.mode=none
+drgrpo_none train algo=dr_grpo curriculum.mode=none
+dapo_none train algo=dapo curriculum.mode=none
+gspo_none train algo=gspo curriculum.mode=none
+drgrpo_e2h train algo=dr_grpo curriculum.mode=easy2hard
+drgrpo_h2e train algo=dr_grpo curriculum.mode=hard2easy
